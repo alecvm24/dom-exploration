@@ -47,3 +47,18 @@ function validatePassword(){
         confirmPasswordField.style.backgroundColor = ''
     }
 }
+
+// add change listener to put dark mode
+const toggleDarkmode = document.getElementById('toggle-darkmode')
+
+toggleDarkmode.addEventListener('change', function(){
+    const selectTheme = toggleDarkmode.value
+    if (selectTheme === 'dark'){
+        document.body.style.backgroundColor = 'black'
+        document.body.style.color = 'white'
+    }
+    else{
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'black'
+    }
+})
