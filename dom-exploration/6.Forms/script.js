@@ -21,3 +21,29 @@ ageInput.addEventListener('keyup', function(){
         HardTruthSection.style.visibility = 'visible';
     }
 });
+
+// add keyup listener on password field
+const passwordField = document.getElementById('pwd')
+const confirmPasswordField = document.getElementById('pwd-confirm')
+
+passwordField.addEventListener('keyup', validatePassword)
+confirmPasswordField.addEventListener('keyup', validatePassword)
+
+function validatePassword(){
+    const passwordValue = passwordField.value
+    const confirmPasswordValue = confirmPasswordField.value
+
+    if(passwordValue.length < 6){
+        passwordField.style.backgroundColor = 'red'
+    }
+    else{
+        passwordField.style.backgroundColor = ''
+    }
+
+    if (passwordValue !== confirmPasswordValue){
+        confirmPasswordField.style.backgroundColor = 'red'
+    }
+    else{
+        confirmPasswordField.style.backgroundColor = ''
+    }
+}
