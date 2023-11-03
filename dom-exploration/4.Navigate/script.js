@@ -1,6 +1,6 @@
 /*
 */
-
+/*change positionning in the ol*/
 let olElement = document.querySelector("ol");
 
 if (olElement){
@@ -11,12 +11,8 @@ if (olElement){
     }
 }
 
-let h2Element = document.querySelector("h2");
-
-if (h2ElementElement){
-    let lastChild = h2Element.lastElementChild;
-    if (lastChild){
-        h2Element.removeChild(lastChild);
-        h2Element.insertBefore(lastChild, h2Element.firstElementChild);
-    }
-}
+/*change position of the sections*/
+const section = document.querySelector('main')
+const a = section.children[1]
+const b = section.children[2]
+b.appendChild(a)
